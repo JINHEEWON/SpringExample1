@@ -13,9 +13,9 @@ public class MemberApp {
         //AppConfig appConfig = new AppConfig();
         //MemberService memberService = appConfig.memberService();
 
-        //스프링 컨테이너. 모든걸 관리
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);  //AppConfig에 있는 환경 설정 정보를 가지고 스프링이 모든 메소드를 스프링 컨테이너에 집어넣어 과나리
-        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);//이름, 타입
+        //ApplicationContext - 스프링 컨테이너. 모든걸 관리
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);  //AppConfig에 있는 환경 설정 정보를 가지고 스프링이 모든 메소드를 스프링 컨테이너에 집어넣어 관리
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class); //이름(메소드 네임), 타입
 
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
