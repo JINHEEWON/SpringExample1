@@ -9,7 +9,6 @@ import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-//
 
 @Configuration
 public class AppConfig {
